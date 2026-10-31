@@ -12,6 +12,7 @@ import io.github.mooy1.infinityexpansion.items.mobdata.MobData;
 import io.github.mooy1.infinityexpansion.items.quarries.Quarries;
 import io.github.mooy1.infinityexpansion.items.storage.Storage;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import org.bukkit.inventory.ItemStack;
 import io.github.thebusybiscuit.slimefun5.api.researches.Research;
 
 @UtilityClass
@@ -135,7 +136,8 @@ public final class Researches {
     }
 
     private static void create(int id, String key, String name, int cost, SlimefunItemStack... items) {
-        new Research(InfinityExpansion.createKey(key), FIRST_RESEARCH_ID + id, name, cost).addItems(items).register();
+        ItemStack[] stacks = java.util.Arrays.stream(items).map(SlimefunItemStack::item).toArray(ItemStack[]::new);
+        new Research(InfinityExpansion.createKey(key), FIRST_RESEARCH_ID + id, name, cost).addItems(stacks).register();
     }
 
 }
