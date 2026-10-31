@@ -5,8 +5,8 @@ import org.bukkit.Material;
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import io.github.mooy1.infinitylib.groups.MultiGroup;
 import io.github.mooy1.infinitylib.groups.SubGroup;
-import io.github.thebusybiscuit.Slimefun5.api.items.ItemGroup;
-import io.github.thebusybiscuit.Slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 
 /**
  * Categories for this addon
