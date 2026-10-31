@@ -15,11 +15,11 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import io.github.mooy1.infinitylib.machines.AbstractMachineBlock;
-import io.github.thebusybiscuit.Slimefun5.api.items.ItemGroup;
-import io.github.thebusybiscuit.Slimefun5.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.Slimefun5.api.recipes.RecipeType;
-import io.github.thebusybiscuit.Slimefun5.core.attributes.RecipeDisplayItem;
-import io.github.thebusybiscuit.Slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.RecipeDisplayItem;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
