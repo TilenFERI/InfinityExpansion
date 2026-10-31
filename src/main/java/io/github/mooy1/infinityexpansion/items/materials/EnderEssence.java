@@ -26,7 +26,6 @@ public final class EnderEssence extends SlimefunItem implements NotPlaceable, GE
     public EnderEssence(ItemGroup category, SlimefunItemStack item, NamespacedKey key) {
         super(category, item, RecipeType.GEO_MINER, new ItemStack[9]);
         this.key = key;
-        register();
     }
 
     @Override
