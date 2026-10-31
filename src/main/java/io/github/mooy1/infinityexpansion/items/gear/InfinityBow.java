@@ -10,15 +10,15 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import io.github.thebusybiscuit.Slimefun5.api.MinecraftVersion;
-import io.github.thebusybiscuit.Slimefun5.api.items.ItemGroup;
-import io.github.thebusybiscuit.Slimefun5.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.Slimefun5.api.recipes.RecipeType;
-import io.github.thebusybiscuit.Slimefun5.core.attributes.NotPlaceable;
-import io.github.thebusybiscuit.Slimefun5.core.attributes.Soulbound;
-import io.github.thebusybiscuit.Slimefun5.core.handlers.BowShootHandler;
-import io.github.thebusybiscuit.Slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.Slimefun5.implementation.items.weapons.ExplosiveBow;
+import io.github.thebusybiscuit.slimefun5.api.MinecraftVersion;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.core.attributes.NotPlaceable;
+import io.github.thebusybiscuit.slimefun5.core.attributes.Soulbound;
+import io.github.thebusybiscuit.slimefun5.core.handlers.BowShootHandler;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.items.weapons.ExplosiveBow;
 
 public final class InfinityBow extends ExplosiveBow implements NotPlaceable, Soulbound {
 
