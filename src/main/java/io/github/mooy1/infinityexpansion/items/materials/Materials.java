@@ -5,7 +5,7 @@ import java.util.Arrays;
 import lombok.experimental.UtilityClass;
 
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinityexpansion.InfinityExpansion;
@@ -287,50 +287,50 @@ public final class Materials {
                 new ItemStack(Material.COBBLESTONE), new ItemStack(Material.COBBLESTONE), new ItemStack(Material.COBBLESTONE)
         });
         registerEnhanced(COBBLE_2, new ItemStack[] {
-                COBBLE_1, COBBLE_1, COBBLE_1,
-                COBBLE_1, COBBLE_1, COBBLE_1,
-                COBBLE_1, COBBLE_1, COBBLE_1
+                COBBLE_1.item(), COBBLE_1.item(), COBBLE_1.item(),
+                COBBLE_1.item(), COBBLE_1.item(), COBBLE_1.item(),
+                COBBLE_1.item(), COBBLE_1.item(), COBBLE_1.item()
         });
         registerEnhanced(COBBLE_3, new ItemStack[] {
-                COBBLE_2, COBBLE_2, COBBLE_2,
-                COBBLE_2, COBBLE_2, COBBLE_2,
-                COBBLE_2, COBBLE_2, COBBLE_2
+                COBBLE_2.item(), COBBLE_2.item(), COBBLE_2.item(),
+                COBBLE_2.item(), COBBLE_2.item(), COBBLE_2.item(),
+                COBBLE_2.item(), COBBLE_2.item(), COBBLE_2.item()
         });
         registerEnhanced(COBBLE_4, new ItemStack[] {
-                COBBLE_3, COBBLE_3, COBBLE_3,
-                COBBLE_3, COBBLE_3, COBBLE_3,
-                COBBLE_3, COBBLE_3, COBBLE_3
+                COBBLE_3.item(), COBBLE_3.item(), COBBLE_3.item(),
+                COBBLE_3.item(), COBBLE_3.item(), COBBLE_3.item(),
+                COBBLE_3.item(), COBBLE_3.item(), COBBLE_3.item()
         });
         registerEnhanced(COBBLE_5, new ItemStack[] {
-                COBBLE_4, COBBLE_4, COBBLE_4,
-                COBBLE_4, COBBLE_4, COBBLE_4,
-                COBBLE_4, COBBLE_4, COBBLE_4
+                COBBLE_4.item(), COBBLE_4.item(), COBBLE_4.item(),
+                COBBLE_4.item(), COBBLE_4.item(), COBBLE_4.item(),
+                COBBLE_4.item(), COBBLE_4.item(), COBBLE_4.item()
         });
         registerEnhanced(VOID_DUST, new ItemStack[] {
-                VOID_BIT, VOID_BIT, VOID_BIT,
-                VOID_BIT, VOID_BIT, VOID_BIT,
-                VOID_BIT, VOID_BIT, VOID_BIT
+                VOID_BIT.item(), VOID_BIT.item(), VOID_BIT.item(),
+                VOID_BIT.item(), VOID_BIT.item(), VOID_BIT.item(),
+                VOID_BIT.item(), VOID_BIT.item(), VOID_BIT.item()
         });
         registerEnhanced(VOID_INGOT, new ItemStack[] {
-                VOID_DUST, VOID_DUST, VOID_DUST,
-                VOID_DUST, VOID_DUST, VOID_DUST,
-                VOID_DUST, VOID_DUST, VOID_DUST
+                VOID_DUST.item(), VOID_DUST.item(), VOID_DUST.item(),
+                VOID_DUST.item(), VOID_DUST.item(), VOID_DUST.item(),
+                VOID_DUST.item(), VOID_DUST.item(), VOID_DUST.item()
         });
-        registerSmeltery(INFINITE_INGOT, EARTH_SINGULARITY, MYTHRIL, FORTUNE_SINGULARITY, MAGIC_SINGULARITY, VOID_INGOT, METAL_SINGULARITY);
+        registerSmeltery(INFINITE_INGOT, EARTH_SINGULARITY.item(), MYTHRIL.item(), FORTUNE_SINGULARITY.item(), MAGIC_SINGULARITY.item(), VOID_INGOT.item(), METAL_SINGULARITY);
         registerSmeltery(FORTUNE_SINGULARITY, GOLD_SINGULARITY, DIAMOND_SINGULARITY, EMERALD_SINGULARITY, NETHERITE_SINGULARITY, ADAMANTITE);
-        registerSmeltery(MAGIC_SINGULARITY, REDSTONE_SINGULARITY, LAPIS_SINGULARITY, QUARTZ_SINGULARITY, MAGNESIUM_SINGULARITY, MAGNONIUM);
-        registerSmeltery(EARTH_SINGULARITY, COBBLE_4, COAL_SINGULARITY, IRON_SINGULARITY, COPPER_SINGULARITY, LEAD_SINGULARITY);
+        registerSmeltery(MAGIC_SINGULARITY, REDSTONE_SINGULARITY.item(), LAPIS_SINGULARITY.item(), QUARTZ_SINGULARITY.item(), MAGNESIUM_SINGULARITY, MAGNONIUM);
+        registerSmeltery(EARTH_SINGULARITY, COBBLE_4.item(), COAL_SINGULARITY.item(), IRON_SINGULARITY.item(), COPPER_SINGULARITY, LEAD_SINGULARITY);
         registerSmeltery(METAL_SINGULARITY, SILVER_SINGULARITY, ALUMINUM_SINGULARITY, TIN_SINGULARITY, ZINC_SINGULARITY, TITANIUM);
         registerSmeltery(MAGSTEEL, SlimefunItems.MAGNESIUM_INGOT, SlimefunItems.STEEL_INGOT, SlimefunItems.MAGNESIUM_DUST);
         registerSmeltery(TITANIUM, SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.DAMASCUS_STEEL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
-        registerSmeltery(MYTHRIL, SlimefunItems.REINFORCED_ALLOY_INGOT, IRON_SINGULARITY, SlimefunItems.HARDENED_METAL_INGOT);
+        registerSmeltery(MYTHRIL, SlimefunItems.REINFORCED_ALLOY_INGOT, IRON_SINGULARITY.item(), SlimefunItems.HARDENED_METAL_INGOT);
         registerSmeltery(ADAMANTITE, SlimefunItems.REDSTONE_ALLOY, DIAMOND_SINGULARITY, MAGSTEEL);
-        registerSmeltery(MAGNONIUM, MAGSTEEL, MAGNESIUM_SINGULARITY, ENDER_ESSENCE);
+        registerSmeltery(MAGNONIUM, MAGSTEEL.item(), MAGNESIUM_SINGULARITY, ENDER_ESSENCE);
         register(VOID_BIT, VoidHarvester.TYPE, new ItemStack[0]);
         registerEnhanced(MAGSTEEL_PLATE, new ItemStack[] {
-                MAGSTEEL, MAGSTEEL, MAGSTEEL,
-                MAGSTEEL, SlimefunItems.HARDENED_METAL_INGOT, MAGSTEEL,
-                MAGSTEEL, MAGSTEEL, MAGSTEEL
+                MAGSTEEL.item(), MAGSTEEL.item(), MAGSTEEL.item(),
+                MAGSTEEL.item(), SlimefunItems.HARDENED_METAL_INGOT, MAGSTEEL.item(),
+                MAGSTEEL.item(), MAGSTEEL.item(), MAGSTEEL.item()
         });
         registerEnhanced(MACHINE_CIRCUIT, new ItemStack[] {
                 SlimefunItems.COPPER_INGOT, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.COPPER_INGOT,
@@ -353,30 +353,30 @@ public final class Materials {
                 SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT
         }, 20).register(plugin);
         registerEnhanced(MACHINE_CORE, new ItemStack[] {
-                TITANIUM, MACHINE_CIRCUIT, TITANIUM,
-                MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CIRCUIT,
-                TITANIUM, MACHINE_CIRCUIT, TITANIUM
+                TITANIUM.item(), MACHINE_CIRCUIT.item(), TITANIUM.item(),
+                MACHINE_CIRCUIT.item(), MACHINE_PLATE.item(), MACHINE_CIRCUIT.item(),
+                TITANIUM.item(), MACHINE_CIRCUIT.item(), TITANIUM.item()
         });
         registerEnhanced(MACHINE_PLATE, new ItemStack[] {
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT,
-                MAGSTEEL_PLATE, TITANIUM, MAGSTEEL_PLATE,
+                MAGSTEEL_PLATE.item(), TITANIUM.item(), MAGSTEEL_PLATE.item(),
                 SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT
         });
-        register(Groups.INFINITY_CHEAT, INFINITE_CIRCUIT, InfinityWorkbench.TYPE, new ItemStack[] {
-                MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT,
-                VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT, VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT,
-                INFINITE_INGOT, VOID_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, VOID_INGOT, INFINITE_INGOT,
-                INFINITE_INGOT, VOID_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, VOID_INGOT, INFINITE_INGOT,
-                VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT, VOID_INGOT, MACHINE_CIRCUIT, VOID_INGOT,
-                MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT, MACHINE_CIRCUIT, INFINITE_INGOT, MACHINE_CIRCUIT
+        register(Groups.INFINITY_CHEAT, INFINITE_CIRCUIT.item(), InfinityWorkbench.TYPE, new ItemStack[] {
+                MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(),
+                VOID_INGOT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(), VOID_INGOT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(),
+                INFINITE_INGOT.item(), VOID_INGOT.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(), INFINITE_INGOT.item(),
+                INFINITE_INGOT.item(), VOID_INGOT.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(), INFINITE_INGOT.item(),
+                VOID_INGOT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(), VOID_INGOT.item(), MACHINE_CIRCUIT.item(), VOID_INGOT.item(),
+                MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item()
         });
-        register(Groups.INFINITY_CHEAT, INFINITE_CORE, InfinityWorkbench.TYPE, new ItemStack[] {
-                MACHINE_PLATE, MACHINE_CORE, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CORE, MACHINE_PLATE,
-                MACHINE_CORE, MACHINE_PLATE, MACHINE_CIRCUIT, MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CORE,
-                INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT,
-                INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CIRCUIT, INFINITE_INGOT,
-                MACHINE_CORE, MACHINE_PLATE, MACHINE_CIRCUIT, MACHINE_CIRCUIT, MACHINE_PLATE, MACHINE_CORE,
-                MACHINE_PLATE, MACHINE_CORE, INFINITE_INGOT, INFINITE_INGOT, MACHINE_CORE, MACHINE_PLATE
+        register(Groups.INFINITY_CHEAT, INFINITE_CORE.item(), InfinityWorkbench.TYPE, new ItemStack[] {
+                MACHINE_PLATE.item(), MACHINE_CORE.item(), INFINITE_INGOT.item(), INFINITE_INGOT.item(), MACHINE_CORE.item(), MACHINE_PLATE.item(),
+                MACHINE_CORE.item(), MACHINE_PLATE.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), MACHINE_PLATE.item(), MACHINE_CORE.item(),
+                INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(),
+                INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(), INFINITE_INGOT.item(), MACHINE_CIRCUIT.item(), INFINITE_INGOT.item(),
+                MACHINE_CORE.item(), MACHINE_PLATE.item(), MACHINE_CIRCUIT.item(), MACHINE_CIRCUIT.item(), MACHINE_PLATE.item(), MACHINE_CORE.item(),
+                MACHINE_PLATE.item(), MACHINE_CORE.item(), INFINITE_INGOT.item(), INFINITE_INGOT.item(), MACHINE_CORE.item(), MACHINE_PLATE.item()
         });
         new Singularity(COPPER_SINGULARITY, SlimefunItems.COPPER_INGOT, 3000).register(plugin);
         new Singularity(ZINC_SINGULARITY, SlimefunItems.ZINC_INGOT, 3000).register(plugin);
@@ -394,7 +394,7 @@ public final class Materials {
         new Singularity(REDSTONE_SINGULARITY, Material.REDSTONE, 1500).register(plugin);
         new Singularity(LAPIS_SINGULARITY, Material.LAPIS_LAZULI, 1500).register(plugin);
         new Singularity(QUARTZ_SINGULARITY, Material.QUARTZ, 1500).register(plugin);
-        new Singularity(INFINITY_SINGULARITY, INFINITE_INGOT, 100).register(plugin);
+        new Singularity(INFINITY_SINGULARITY, INFINITE_INGOT.item(), 100).register(plugin);
     }
 
     private static void registerEnhanced(SlimefunItemStack item, ItemStack[] recipe) {
