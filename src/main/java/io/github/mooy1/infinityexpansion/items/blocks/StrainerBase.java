@@ -40,7 +40,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 public final class StrainerBase extends TickingMenuBlock implements RecipeDisplayItem {
 
 
-    private static final ItemStack POTATO = new CustomItemStack(Material.POTATO, "&7:&6Potatofish&7:", "&eLucky");
+    private static final ItemStack POTATO = CustomItemStack.create(Material.POTATO, "&7:&6Potatofish&7:", "&eLucky");
     private static final int STATUS_SLOT = 10;
     private static final int[] OUTPUT_SLOTS = {
             13, 14, 15, 16,
@@ -59,16 +59,16 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
             new ItemStack(Material.QUARTZ),
             new ItemStack(Material.REDSTONE),
             new ItemStack(Material.EMERALD),
-            new SlimefunItemStack(SlimefunItems.MAGNESIUM_DUST, 1),
+            new SlimefunItemStack(SlimefunItems.MAGNESIUM_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1).item(),
             new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.SILVER_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.ALUMINUM_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.LEAD_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.IRON_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.GOLD_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.TIN_DUST, 1),
-            new SlimefunItemStack(SlimefunItems.ZINC_DUST, 1),
+            new SlimefunItemStack(SlimefunItems.SILVER_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.ALUMINUM_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.LEAD_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.IRON_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.GOLD_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.TIN_DUST, 1).item(),
+            new SlimefunItemStack(SlimefunItems.ZINC_DUST, 1).item(),
     };
 
     private final int time;
@@ -124,7 +124,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         List<ItemStack> items = new ArrayList<>();
 
         for (ItemStack output : OUTPUTS) {
-            items.add(Materials.BASIC_STRAINER);
+            items.add(Materials.BASIC_STRAINER.item());
             items.add(output);
         }
 
@@ -201,7 +201,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
 
         //reduce durability
 
-        if (random.nextInt(strainer.getEnchantmentLevel(Enchantment.DURABILITY) + 3 * strainer.getEnchantmentLevel(Enchantment.MENDING) + 1) == 0) {
+        if (random.nextInt(strainer.getEnchantmentLevel(Enchantment.UNBREAKING) + 3 * strainer.getEnchantmentLevel(Enchantment.MENDING) + 1) == 0) {
             ItemMeta itemMeta = strainer.getItemMeta();
             Damageable durability = (Damageable) itemMeta;
 
