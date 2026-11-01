@@ -148,7 +148,7 @@ public final class Generators {
                 Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(),
                 SlimefunItems.LAVA_GENERATOR_2.item(), SlimefunItems.LAVA_GENERATOR_2.item(), SlimefunItems.LAVA_GENERATOR_2.item(),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
-        }, GEO_ENERGY, GenerationType.GEOTHERMAL.item()).register(plugin);
+        }, GEO_ENERGY, GenerationType.GEOTHERMAL).register(plugin);
         new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 GEOTHERMAL.item(), Materials.MACHINE_CIRCUIT.item(), GEOTHERMAL.item(),
                 Materials.MACHINE_PLATE.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_PLATE.item(),
