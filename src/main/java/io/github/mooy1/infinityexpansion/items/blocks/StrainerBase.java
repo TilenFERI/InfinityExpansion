@@ -61,7 +61,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
             new ItemStack(Material.EMERALD),
             new SlimefunItemStack(SlimefunItems.MAGNESIUM_DUST, 1).item(),
             new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1).item(),
-            new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1),
+            new SlimefunItemStack(SlimefunItems.COPPER_DUST, 1).item(),
             new SlimefunItemStack(SlimefunItems.SILVER_DUST, 1).item(),
             new SlimefunItemStack(SlimefunItems.ALUMINUM_DUST, 1).item(),
             new SlimefunItemStack(SlimefunItems.LEAD_DUST, 1).item(),
@@ -153,7 +153,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         if (speed == 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&cInput a Strainer!"));
+                inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.BARRIER, "&cInput a Strainer!"));
             }
 
             return;
@@ -166,7 +166,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         if (random.nextInt(this.time / speed) != 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aCollecting..."));
+                inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aCollecting..."));
             }
 
             return;
@@ -196,7 +196,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         inv.pushItem(output.clone(), OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aMaterial Collected!"));
+            inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aMaterial Collected!"));
         }
 
         //reduce durability
