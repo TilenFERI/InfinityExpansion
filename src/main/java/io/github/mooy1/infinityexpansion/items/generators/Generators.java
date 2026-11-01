@@ -133,45 +133,45 @@ public final class Generators {
                 Materials.INFINITE_INGOT.item(), Materials.INFINITE_CIRCUIT.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CIRCUIT.item(), Materials.INFINITE_INGOT.item()
         }, INFINITY_REACTOR_ENERGY).register(plugin);
 
-        new EnergyGenerator(Groups.BASIC_MACHINES, HYDRO.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.BASIC_MACHINES, HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL.item(),
                 new ItemStack(Material.BUCKET), SlimefunItems.ELECTRO_MAGNET.item(), new ItemStack(Material.BUCKET),
                 Materials.MAGSTEEL.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL.item()
-        }, HYDRO.item()_ENERGY, GenerationType.HYDRO.item()ELECTRIC).register(plugin);
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_HYDRO.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        }, HYDRO_ENERGY, GenerationType.HYDROELECTRIC).register(plugin);
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_HYDRO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 HYDRO.item(), Materials.MACHINE_CIRCUIT.item(), HYDRO.item(),
-                Materials.MAGSTEEL.item()_PLATE, Materials.MACHINE_CORE.item(), Materials.MAGSTEEL.item()_PLATE,
+                Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_CORE.item(), Materials.MAGSTEEL_PLATE.item(),
                 HYDRO.item(), Materials.MACHINE_CIRCUIT.item(), HYDRO.item()
-        }, ADVANCED_HYDRO.item()_ENERGY, GenerationType.HYDRO.item()ELECTRIC).register(plugin);
+        }, ADVANCED_HYDRO_ENERGY, GenerationType.HYDROELECTRIC).register(plugin);
 
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, GEOTHERMAL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MAGSTEEL.item()_PLATE, Materials.MAGSTEEL.item()_PLATE, Materials.MAGSTEEL.item()_PLATE,
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(),
                 SlimefunItems.LAVA_GENERATOR_2.item(), SlimefunItems.LAVA_GENERATOR_2.item(), SlimefunItems.LAVA_GENERATOR_2.item(),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
         }, GEO_ENERGY, GenerationType.GEOTHERMAL.item()).register(plugin);
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, REINFORCED_GEOTHERMAL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 GEOTHERMAL.item(), Materials.MACHINE_CIRCUIT.item(), GEOTHERMAL.item(),
                 Materials.MACHINE_PLATE.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_PLATE.item(),
                 GEOTHERMAL.item(), Materials.MACHINE_CIRCUIT.item(), GEOTHERMAL.item()
         }, ADVANCED_GEO_ENERGY, GenerationType.GEOTHERMAL.item()).register(plugin);
 
-        new EnergyGenerator(Groups.BASIC_MACHINES, BASIC_PANEL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MAGSTEEL.item(), Materials.MAGSTEEL.item()_PLATE, Materials.MAGSTEEL.item(),
+        new EnergyGenerator(Groups.BASIC_MACHINES, BASIC_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                Materials.MAGSTEEL.item(), Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL.item(),
                 SlimefunItems.SOLAR_PANEL.item(), SlimefunItems.SOLAR_PANEL.item(), SlimefunItems.SOLAR_PANEL.item(),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CIRCUIT.item()
         }, BASIC_SOLAR_ENERGY, GenerationType.SOLAR).register(plugin);
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, ADVANCED_PANEL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, ADVANCED_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 BASIC_PANEL.item(), BASIC_PANEL.item(), BASIC_PANEL.item(),
                 Materials.TITANIUM.item(), SlimefunItems.SOLAR_GENERATOR_4.item(), Materials.TITANIUM.item(),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CIRCUIT.item()
         }, ADVANCED_SOLAR_ENERGY, GenerationType.SOLAR).register(plugin);
 
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, CELESTIAL_PANEL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, CELESTIAL_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MACHINE_PLATE.item(), Materials.MACHINE_PLATE.item(), Materials.MACHINE_PLATE.item(),
                 ADVANCED_PANEL.item(), ADVANCED_PANEL.item(), ADVANCED_PANEL.item(),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
         }, CELESTIAL_ENERGY, GenerationType.SOLAR).register(plugin);
-        new EnergyGenerator(Groups.ADVANCED_MACHINES, VOID_PANEL.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new EnergyGenerator(Groups.ADVANCED_MACHINES, VOID_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.VOID_INGOT.item(), Materials.VOID_INGOT.item(), Materials.VOID_INGOT.item(),
                 CELESTIAL_PANEL.item(), CELESTIAL_PANEL.item(), CELESTIAL_PANEL.item(),
                 Materials.MAGNONIUM.item(), Materials.MAGNONIUM.item(), Materials.MAGNONIUM.item()
