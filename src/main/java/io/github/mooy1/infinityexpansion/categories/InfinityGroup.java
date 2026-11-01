@@ -159,7 +159,7 @@ public final class InfinityGroup extends FlexItemGroup {
         menu.addItem(52, ChestMenuUtils.getNextButton(player, 1, 1), ChestMenuUtils.getEmptyClickHandler());
         menu.addItem(53, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
 
-        menu.addItem(1, CustomItemStack.create(ChestMenuUtils.getBackButton(
+        menu.addItem(1, ChestMenuUtils.getBackButton(
                 player, "", ChatColor.GRAY + Slimefun.getLocalization().getMessage(player, "guide.back.guide"))));
 
         int i = 9;
