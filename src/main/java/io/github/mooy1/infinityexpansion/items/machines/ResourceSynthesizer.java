@@ -91,8 +91,8 @@ public final class ResourceSynthesizer extends AbstractMachineBlock implements R
         for (int i = 0 ; i < this.recipes.length ; i += 3) {
             items.add(this.recipes[i].item());
             items.add(this.recipes[i + 2].item());
-            items.add(this.recipes[i + 1]);
-            items.add(this.recipes[i + 2]);
+            items.add(this.recipes[i + 1].item());
+            items.add(this.recipes[i + 2].item());
         }
 
         return items;
