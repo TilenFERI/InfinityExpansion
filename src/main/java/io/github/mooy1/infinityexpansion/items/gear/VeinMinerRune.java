@@ -62,7 +62,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
     private static final double RANGE = 1.5;
     private static final int MAX = 64;
     private static final String LORE = ChatColor.AQUA + "Veinminer - Crouch to use";
-    private static final NamespacedKey key = InfinityExpansion.createKey("vein_miner");
+    private static final NamespacedKey key = new NamespacedKey("infinityexpansion", "vein_miner");
 
     private final CoolDowns cooldowns = new CoolDowns(1000);
     private Block processing;
