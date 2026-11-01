@@ -42,7 +42,7 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
     private static final Map<Enchantment, Integer> MAX_LEVELS = Util.getEnchants(Objects.requireNonNull(
             InfinityExpansion.config().getConfigurationSection("advanced-anvil-max-levels")
     ));
-    private static final ItemStack ANVIL_SLOT = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ");
+    private static final ItemStack ANVIL_SLOT = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ");
     private static final int[] INPUT_SLOTS = {
             10, 13
     };
