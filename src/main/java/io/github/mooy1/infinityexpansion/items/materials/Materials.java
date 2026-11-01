@@ -401,8 +401,15 @@ public final class Materials {
         register(item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
     }
 
-    private static void registerSmeltery(SlimefunItemStack itemStack, ItemStack... recipe) {
-        register(itemStack, RecipeType.SMELTERY, Arrays.copyOf(recipe, 9));
+    private static void registerSmeltery(SlimefunItemStack itemStack, Object... recipe) {
+        ItemStack[] ingredients = new ItemStack[9];
+        for (int i = 0; i < Math.min(recipe.length, ingredients.length); i++) {
+            Object ingredient = recipe[i];
+            ingredients[i] = ingredient instanceof SlimefunItemStack slimefunItem
+                    ? slimefunItem.item()
+                    : (ItemStack) ingredient;
+        }
+        register(itemStack, RecipeType.SMELTERY, ingredients);
     }
 
     private static void register(SlimefunItemStack itemStack, RecipeType type, ItemStack[] recipe) {
