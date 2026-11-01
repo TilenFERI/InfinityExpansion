@@ -316,13 +316,13 @@ public final class Machines {
                 Materials.COBBLE_5.item(), Materials.COBBLE_5.item(), Materials.COBBLE_5.item(), Materials.COBBLE_5.item(), Materials.COBBLE_5.item(), Materials.COBBLE_5.item()
         }, BEDROCK_ENERGY).register(plugin);
         new MaterialGenerator(Groups.BASIC_MACHINES, BASIC_COBBLE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Materials.MAGSTEEL.item(), new ItemStack(Material.DIAMOND_PICKAXE.item()), Materials.MAGSTEEL.item(),
-                new ItemStack(Material.WATER_BUCKET.item()), Materials.COBBLE_2.item(), new ItemStack(Material.LAVA_BUCKET.item()),
+                Materials.MAGSTEEL.item(), new ItemStack(Material.DIAMOND_PICKAXE), Materials.MAGSTEEL.item(),
+                new ItemStack(Material.WATER_BUCKET), Materials.COBBLE_2.item(), new ItemStack(Material.LAVA_BUCKET),
                 Materials.MAGSTEEL.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL.item()
         }).material(Material.COBBLESTONE).speed(1).energyPerTick(24).register(plugin);
         new MaterialGenerator(Groups.ADVANCED_MACHINES, ADVANCED_COBBLE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE.item(), BASIC_COBBLE.item(), Materials.MAGSTEEL_PLATE.item(),
-                new ItemStack(Material.WATER_BUCKET.item()), Materials.COBBLE_3.item(), new ItemStack(Material.LAVA_BUCKET.item()),
+                new ItemStack(Material.WATER_BUCKET), Materials.COBBLE_3.item(), new ItemStack(Material.LAVA_BUCKET),
                 Materials.MACHINE_CIRCUIT.item(), BASIC_COBBLE.item(), Materials.MACHINE_CIRCUIT.item()
         }).material(Material.COBBLESTONE).speed(4).energyPerTick(75).register(plugin);
         new MaterialGenerator(Groups.INFINITY_CHEAT, INFINITY_COBBLE, InfinityWorkbench.TYPE, new ItemStack[] {
@@ -335,28 +335,28 @@ public final class Machines {
         }).material(Material.COBBLESTONE).speed(64).energyPerTick(800).register(plugin);
         new MaterialGenerator(Groups.ADVANCED_MACHINES, BASIC_OBSIDIAN, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.FLUID_PUMP.item(), SlimefunItems.PROGRAMMABLE_ANDROID_MINER.item(), SlimefunItems.FLUID_PUMP.item(),
-                new ItemStack(Material.DISPENSER.item()), Materials.VOID_INGOT.item(), new ItemStack(Material.DISPENSER.item()),
+                new ItemStack(Material.DISPENSER), Materials.VOID_INGOT.item(), new ItemStack(Material.DISPENSER),
                 Materials.MACHINE_CIRCUIT.item(), ADVANCED_COBBLE.item(), Materials.MACHINE_CIRCUIT.item()
         }).material(Material.OBSIDIAN).speed(1).energyPerTick(240).register(plugin);
 
         EnumMap<Material, ItemStack[]> crops = new EnumMap<>(Material.class);
-        crops.put(Material.WHEAT_SEEDS, new ItemStack[] { new ItemStack(Material.WHEAT.item(), 2) });
-        crops.put(Material.CARROT, new ItemStack[] { new ItemStack(Material.CARROT.item(), 2) });
-        crops.put(Material.POTATO, new ItemStack[] { new ItemStack(Material.POTATO.item(), 2) });
-        crops.put(Material.BEETROOT_SEEDS, new ItemStack[] { new ItemStack(Material.BEETROOT.item(), 2) });
-        crops.put(Material.PUMPKIN_SEEDS, new ItemStack[] { new ItemStack(Material.PUMPKIN.item()) });
-        crops.put(Material.MELON_SEEDS, new ItemStack[] { new ItemStack(Material.MELON.item()) });
-        crops.put(Material.SUGAR_CANE, new ItemStack[] { new ItemStack(Material.SUGAR_CANE.item(), 2) });
-        crops.put(Material.COCOA_BEANS, new ItemStack[] { new ItemStack(Material.COCOA_BEANS.item(), 2) });
-        crops.put(Material.CACTUS, new ItemStack[] { new ItemStack(Material.CACTUS.item(), 2) });
-        crops.put(Material.BAMBOO, new ItemStack[] { new ItemStack(Material.BAMBOO.item(), 6) });
-        crops.put(Material.CHORUS_FLOWER, new ItemStack[] { new ItemStack(Material.CHORUS_FRUIT.item(), 6) });
-        crops.put(Material.NETHER_WART, new ItemStack[] { new ItemStack(Material.NETHER_WART.item(), 2) });
+        crops.put(Material.WHEAT_SEEDS, new ItemStack[] { new ItemStack(Material.WHEAT, 2) });
+        crops.put(Material.CARROT, new ItemStack[] { new ItemStack(Material.CARROT, 2) });
+        crops.put(Material.POTATO, new ItemStack[] { new ItemStack(Material.POTATO, 2) });
+        crops.put(Material.BEETROOT_SEEDS, new ItemStack[] { new ItemStack(Material.BEETROOT, 2) });
+        crops.put(Material.PUMPKIN_SEEDS, new ItemStack[] { new ItemStack(Material.PUMPKIN) });
+        crops.put(Material.MELON_SEEDS, new ItemStack[] { new ItemStack(Material.MELON) });
+        crops.put(Material.SUGAR_CANE, new ItemStack[] { new ItemStack(Material.SUGAR_CANE, 2) });
+        crops.put(Material.COCOA_BEANS, new ItemStack[] { new ItemStack(Material.COCOA_BEANS, 2) });
+        crops.put(Material.CACTUS, new ItemStack[] { new ItemStack(Material.CACTUS, 2) });
+        crops.put(Material.BAMBOO, new ItemStack[] { new ItemStack(Material.BAMBOO, 6) });
+        crops.put(Material.CHORUS_FLOWER, new ItemStack[] { new ItemStack(Material.CHORUS_FRUIT, 6) });
+        crops.put(Material.NETHER_WART, new ItemStack[] { new ItemStack(Material.NETHER_WART, 2) });
 
         new GrowingMachine(Groups.BASIC_MACHINES, BASIC_GROWER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()),
-                Materials.MAGSTEEL.item(), new ItemStack(Material.DIAMOND_HOE.item()), Materials.MAGSTEEL.item(),
-                Materials.MACHINE_CIRCUIT.item(), new ItemStack(Material.GRASS_BLOCK.item()), Materials.MACHINE_CIRCUIT.item()
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
+                Materials.MAGSTEEL.item(), new ItemStack(Material.DIAMOND_HOE), Materials.MAGSTEEL.item(),
+                Materials.MACHINE_CIRCUIT.item(), new ItemStack(Material.GRASS_BLOCK), Materials.MACHINE_CIRCUIT.item()
         }).recipes(crops).ticksPerOutput(300).energyPerTick(18).register(plugin);
         new GrowingMachine(Groups.ADVANCED_MACHINES, ADVANCED_GROWER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.HARDENED_GLASS.item(), SlimefunItems.HARDENED_GLASS.item(), SlimefunItems.HARDENED_GLASS.item(),
@@ -364,10 +364,10 @@ public final class Machines {
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
         }).recipes(crops).ticksPerOutput(60).energyPerTick(90).register(plugin);
         new GrowingMachine(Groups.INFINITY_CHEAT, INFINITY_GROWER, InfinityWorkbench.TYPE, new ItemStack[] {
-                new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), null, null, null, null, new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), null, null, null, null, new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), new ItemStack(Material.GRASS_BLOCK.item()), new ItemStack(Material.GRASS_BLOCK.item()), new ItemStack(Material.GRASS_BLOCK.item()), new ItemStack(Material.GRASS_BLOCK.item()), new ItemStack(Material.GLASS.item()),
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), null, null, null, null, new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), null, null, null, null, new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.GRASS_BLOCK), new ItemStack(Material.GLASS),
                 Materials.MACHINE_PLATE.item(), SlimefunItems.CROP_GROWTH_ACCELERATOR_2.item(), ADVANCED_GROWER.item(), ADVANCED_GROWER.item(), SlimefunItems.CROP_GROWTH_ACCELERATOR_2.item(), Materials.MACHINE_PLATE.item(),
                 Materials.MACHINE_PLATE.item(), Materials.INFINITE_CIRCUIT.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CIRCUIT.item(), Materials.MACHINE_PLATE.item()
         }).recipes(crops).ticksPerOutput(12).energyPerTick(900).register(plugin);
@@ -375,33 +375,33 @@ public final class Machines {
         EnumMap<Material, ItemStack[]> trees = new EnumMap<>(Material.class);
 
         trees.put(Material.OAK_SAPLING, new ItemStack[] {
-                new ItemStack(Material.OAK_LEAVES.item(), 8), new ItemStack(Material.OAK_LOG.item(), 6), new ItemStack(Material.STICK.item()), new ItemStack(Material.APPLE.item())
+                new ItemStack(Material.OAK_LEAVES, 8), new ItemStack(Material.OAK_LOG, 6), new ItemStack(Material.STICK), new ItemStack(Material.APPLE)
         });
         trees.put(Material.SPRUCE_SAPLING, new ItemStack[] {
-                new ItemStack(Material.SPRUCE_LEAVES.item(), 8), new ItemStack(Material.SPRUCE_LOG.item(), 6), new ItemStack(Material.STICK.item(), 2)
+                new ItemStack(Material.SPRUCE_LEAVES, 8), new ItemStack(Material.SPRUCE_LOG, 6), new ItemStack(Material.STICK, 2)
         });
         trees.put(Material.DARK_OAK_SAPLING, new ItemStack[] {
-                new ItemStack(Material.DARK_OAK_LEAVES.item(), 8), new ItemStack(Material.DARK_OAK_LOG.item(), 6), new ItemStack(Material.APPLE.item())
+                new ItemStack(Material.DARK_OAK_LEAVES, 8), new ItemStack(Material.DARK_OAK_LOG, 6), new ItemStack(Material.APPLE)
         });
         trees.put(Material.BIRCH_SAPLING, new ItemStack[] {
-                new ItemStack(Material.BIRCH_LEAVES.item(), 8), new ItemStack(Material.BIRCH_LOG.item(), 6)
+                new ItemStack(Material.BIRCH_LEAVES, 8), new ItemStack(Material.BIRCH_LOG, 6)
         });
         trees.put(Material.ACACIA_SAPLING, new ItemStack[] {
-                new ItemStack(Material.ACACIA_LEAVES.item(), 8), new ItemStack(Material.ACACIA_LOG.item(), 6)
+                new ItemStack(Material.ACACIA_LEAVES, 8), new ItemStack(Material.ACACIA_LOG, 6)
         });
         trees.put(Material.JUNGLE_SAPLING, new ItemStack[] {
-                new ItemStack(Material.JUNGLE_LEAVES.item(), 8), new ItemStack(Material.JUNGLE_LOG.item(), 6), new ItemStack(Material.COCOA_BEANS.item())
+                new ItemStack(Material.JUNGLE_LEAVES, 8), new ItemStack(Material.JUNGLE_LOG, 6), new ItemStack(Material.COCOA_BEANS)
         });
         trees.put(Material.WARPED_FUNGUS, new ItemStack[] {
-                new ItemStack(Material.WARPED_HYPHAE.item(), 8), new ItemStack(Material.WARPED_STEM.item(), 6), new ItemStack(Material.SHROOMLIGHT.item())
+                new ItemStack(Material.WARPED_HYPHAE, 8), new ItemStack(Material.WARPED_STEM, 6), new ItemStack(Material.SHROOMLIGHT)
         });
         trees.put(Material.CRIMSON_FUNGUS, new ItemStack[] {
-                new ItemStack(Material.CRIMSON_HYPHAE.item(), 8), new ItemStack(Material.CRIMSON_STEM.item(), 6), new ItemStack(Material.WEEPING_VINES.item())
+                new ItemStack(Material.CRIMSON_HYPHAE, 8), new ItemStack(Material.CRIMSON_STEM, 6), new ItemStack(Material.WEEPING_VINES)
         });
 
         new GrowingMachine(Groups.BASIC_MACHINES, BASIC_TREE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()),
-                Materials.MAGSTEEL.item(), new ItemStack(Material.PODZOL.item()), Materials.MAGSTEEL.item(),
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
+                Materials.MAGSTEEL.item(), new ItemStack(Material.PODZOL), Materials.MAGSTEEL.item(),
                 Materials.MACHINE_CIRCUIT.item(), BASIC_GROWER.item(), Materials.MACHINE_CIRCUIT.item()
         }).recipes(trees).ticksPerOutput(600).energyPerTick(36).register(plugin);
         new GrowingMachine(Groups.ADVANCED_MACHINES, ADVANCED_TREE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
@@ -410,17 +410,17 @@ public final class Machines {
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
         }).recipes(trees).ticksPerOutput(120).energyPerTick(180).register(plugin);
         new GrowingMachine(Groups.INFINITY_CHEAT, INFINITY_TREE, InfinityWorkbench.TYPE, new ItemStack[] {
-                new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()), new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), null, null, SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), ADVANCED_TREE.item(), null, null, ADVANCED_TREE.item(), new ItemStack(Material.GLASS.item()),
-                new ItemStack(Material.GLASS.item()), SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), null, null, SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), new ItemStack(Material.GLASS.item()),
-                Materials.MACHINE_PLATE.item(), new ItemStack(Material.PODZOL.item()), new ItemStack(Material.PODZOL.item()), new ItemStack(Material.PODZOL.item()), new ItemStack(Material.PODZOL.item()), Materials.MACHINE_PLATE.item(),
+                new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), null, null, SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), ADVANCED_TREE.item(), null, null, ADVANCED_TREE.item(), new ItemStack(Material.GLASS),
+                new ItemStack(Material.GLASS), SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), null, null, SlimefunItems.TREE_GROWTH_ACCELERATOR.item(), new ItemStack(Material.GLASS),
+                Materials.MACHINE_PLATE.item(), new ItemStack(Material.PODZOL), new ItemStack(Material.PODZOL), new ItemStack(Material.PODZOL), new ItemStack(Material.PODZOL), Materials.MACHINE_PLATE.item(),
                 Materials.MACHINE_PLATE.item(), Materials.INFINITE_CIRCUIT.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CIRCUIT.item(), Materials.MACHINE_PLATE.item()
         }).recipes(trees).ticksPerOutput(24).energyPerTick(1800).register(plugin);
 
         new MachineBlock(Groups.ADVANCED_MACHINES, EXTREME_FREEZER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.FREEZER_2.item(), SlimefunItems.FREEZER_2.item(), SlimefunItems.FREEZER_2.item(),
-                new ItemStack(Material.WATER_BUCKET.item()), SlimefunItems.FLUID_PUMP.item(), new ItemStack(Material.WATER_BUCKET.item()),
+                new ItemStack(Material.WATER_BUCKET), SlimefunItems.FLUID_PUMP.item(), new ItemStack(Material.WATER_BUCKET),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
         }).addRecipe(SlimefunItems.NETHER_ICE_COOLANT_CELL, new ItemStack(Material.MAGMA_BLOCK, 2))
                 .ticksPerOutput(1)
@@ -531,7 +531,7 @@ public final class Machines {
 
         new MachineBlock(Groups.ADVANCED_MACHINES, DECOMPRESSOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL_PLATE.item(),
-                new ItemStack(Material.STICKY_PISTON.item()), SlimefunItems.ELECTRIC_PRESS_2.item(), new ItemStack(Material.STICKY_PISTON.item()),
+                new ItemStack(Material.STICKY_PISTON), SlimefunItems.ELECTRIC_PRESS_2.item(), new ItemStack(Material.STICKY_PISTON),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item(),
         }).addRecipe(new ItemStack(Material.EMERALD, 9), new ItemStack(Material.EMERALD_BLOCK))
                 .addRecipe(new ItemStack(Material.DIAMOND, 9), new ItemStack(Material.DIAMOND_BLOCK))
@@ -551,7 +551,7 @@ public final class Machines {
 
         new GearTransformer(Groups.ADVANCED_MACHINES, GEAR_TRANSFORMER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL_PLATE.item(),
-                Materials.MACHINE_CIRCUIT.item(), new ItemStack(Material.SMITHING_TABLE.item()), Materials.MACHINE_CIRCUIT.item(),
+                Materials.MACHINE_CIRCUIT.item(), new ItemStack(Material.SMITHING_TABLE), Materials.MACHINE_CIRCUIT.item(),
                 Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL_PLATE.item()
         }, GEAR_TRANSFORMER_ENERGY).register(plugin);
 
