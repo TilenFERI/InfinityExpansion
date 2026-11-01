@@ -292,7 +292,7 @@ public final class Machines {
                 null, Materials.VOID_INGOT.item(), SINGULARITY_CONSTRUCTOR.item(), SINGULARITY_CONSTRUCTOR.item(), Materials.VOID_INGOT.item(), null,
                 null, Materials.INFINITE_INGOT.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_CORE.item(), Materials.INFINITE_INGOT.item(), null,
                 Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item(), Materials.INFINITE_INGOT.item()
-        }).setSpeed(64).energyPerTick(1200).register(plugin);
+        }).speed(64).energyPerTick(1200).register(plugin);
 
         new ResourceSynthesizer(Groups.ADVANCED_MACHINES, RESOURCE_SYNTHESIZER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.ADAMANTITE.item(), Materials.ADAMANTITE.item(), Materials.ADAMANTITE.item(),
