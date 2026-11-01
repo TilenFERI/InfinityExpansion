@@ -191,7 +191,7 @@ public final class InfinityGroup extends FlexItemGroup {
             }
             else {
                 menu.addItem(i, item.getFirstValue(), (p, slot, item1, action) -> {
-                    openInfinityRecipe(p, item.getFirstValue().getItemId(), entry);
+                    openInfinityRecipe(p, sfItem.getId(), entry);
                     return false;
                 });
             }
