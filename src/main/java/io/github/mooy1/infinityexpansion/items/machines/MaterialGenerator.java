@@ -5,8 +5,6 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import lombok.Setter;
-
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -31,10 +29,18 @@ public final class MaterialGenerator extends AbstractMachineBlock implements Rec
     private static final int[] OUTPUT_SLOTS = { 13 };
     private static final int STATUS_SLOT = 4;
 
-    @Setter
     private int speed;
-    @Setter
     private Material material;
+
+    public MaterialGenerator speed(int speed) {
+        this.speed = speed;
+        return this;
+    }
+
+    public MaterialGenerator material(Material material) {
+        this.material = material;
+        return this;
+    }
 
     public MaterialGenerator(ItemGroup category, SlimefunItemStack item, RecipeType type, ItemStack[] recipe) {
         super(category, item, type, recipe);
@@ -99,7 +105,7 @@ public final class MaterialGenerator extends AbstractMachineBlock implements Rec
         inv.pushItem(output, OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&aGenerating..."));
+            inv.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aGenerating..."));
         }
 
         return true;
