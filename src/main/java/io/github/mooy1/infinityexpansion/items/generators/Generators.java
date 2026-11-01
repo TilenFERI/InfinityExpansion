@@ -153,7 +153,7 @@ public final class Generators {
                 GEOTHERMAL.item(), Materials.MACHINE_CIRCUIT.item(), GEOTHERMAL.item(),
                 Materials.MACHINE_PLATE.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_PLATE.item(),
                 GEOTHERMAL.item(), Materials.MACHINE_CIRCUIT.item(), GEOTHERMAL.item()
-        }, ADVANCED_GEO_ENERGY, GenerationType.GEOTHERMAL.item()).register(plugin);
+        }, ADVANCED_GEO_ENERGY, GenerationType.GEOTHERMAL).register(plugin);
 
         new EnergyGenerator(Groups.BASIC_MACHINES, BASIC_PANEL, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL.item(), Materials.MAGSTEEL_PLATE.item(), Materials.MAGSTEEL.item(),
