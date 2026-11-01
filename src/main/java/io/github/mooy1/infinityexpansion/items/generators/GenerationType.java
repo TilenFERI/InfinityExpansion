@@ -2,8 +2,6 @@ package io.github.mooy1.infinityexpansion.items.generators;
 
 import javax.annotation.Nonnull;
 
-import lombok.Getter;
-
 import org.bukkit.World;
 import org.bukkit.block.Block;
 
@@ -71,6 +69,10 @@ public enum GenerationType {
 
     GenerationType(String toString) {
         this.toString = toString;
+    }
+
+    public String getToString() {
+        return this.toString;
     }
 
     @Override
