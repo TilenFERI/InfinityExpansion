@@ -28,8 +28,14 @@ import io.github.mooy1.infinitylib.core.AbstractAddon;
 public class InfinityExpansion extends AbstractAddon {
 
     public InfinityExpansion(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
-        super(loader, description, dataFolder, file,
+        this(loader, description, dataFolder, file,
                 "Mooy1", "InfinityExpansion", "master", "auto-update");
+    }
+
+    public InfinityExpansion(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file,
+            String githubUserName, String githubRepo, String autoUpdateBranch, String autoUpdateKey) {
+        super(loader, description, dataFolder, file,
+                githubUserName, githubRepo, autoUpdateBranch, autoUpdateKey);
     }
 
     public InfinityExpansion() {
