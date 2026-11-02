@@ -105,7 +105,6 @@ public final class InfinityGroup extends ItemGroup {
         });
     }
 
-    @Override
     public void open(Player player, PlayerProfile playerProfile, SlimefunGuideMode slimefunGuideMode) {
         open(player, new BackEntry(null, playerProfile, Slimefun.getRegistry().getSlimefunGuide(slimefunGuideMode)), true);
         playerProfile.getGuideHistory().add(this, 1);
