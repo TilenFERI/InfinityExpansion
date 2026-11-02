@@ -1,7 +1,7 @@
 package io.github.mooy1.infinityexpansion;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.InputStream;
 
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPluginLoader;
@@ -26,26 +26,32 @@ class TestInfinityExpansion {
     }
 
     @Test
-    void testLoad() throws IOException {
+    void testLoad() throws Exception {
         File dataFolder = MockBukkit.getMock().getPluginManager()
                 .createTemporaryDirectory("InfinityExpansion-test");
         File pluginFile = MockBukkit.getMock().getPluginManager()
                 .createTemporaryPluginFile("InfinityExpansion-test");
 
-        PluginDescriptionFile description = new PluginDescriptionFile(
-                "InfinityExpansion", "MODIFIED", InfinityExpansion.class.getName());
+        try (InputStream pluginYml = TestInfinityExpansion.class.getClassLoader()
+                .getResourceAsStream("plugin.yml")) {
+            if (pluginYml == null) {
+                throw new IllegalStateException("plugin.yml was not found on the test classpath");
+            }
 
-        MockBukkit.load(
-                InfinityExpansion.class,
-                new JavaPluginLoader(MockBukkit.getMock()),
-                description,
-                dataFolder,
-                pluginFile,
-                "Mooy1",
-                "InfinityExpansion",
-                "master",
-                "auto-update"
-        );
+            PluginDescriptionFile description = new PluginDescriptionFile(pluginYml);
+
+            MockBukkit.load(
+                    InfinityExpansion.class,
+                    new JavaPluginLoader(MockBukkit.getMock()),
+                    description,
+                    dataFolder,
+                    pluginFile,
+                    "Mooy1",
+                    "InfinityExpansion",
+                    "master",
+                    "auto-update"
+            );
+        }
     }
 
 }
