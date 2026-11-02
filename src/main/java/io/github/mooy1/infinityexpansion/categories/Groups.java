@@ -6,6 +6,8 @@ import io.github.mooy1.infinityexpansion.InfinityExpansion;
 import io.github.mooy1.infinitylib.groups.MultiGroup;
 import io.github.mooy1.infinitylib.groups.SubGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.core.guide.menus.AddonItemGroup;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 
 /**
@@ -40,6 +42,13 @@ public final class Groups {
         MAIN_CATEGORY.register(inst);
         MOB_SIMULATION.setCrossAddonItemGroup(true);
         INFINITY_CHEAT.register(inst);
+
+        AddonItemGroup guideRoot = new AddonItemGroup(
+                InfinityExpansion.createKey("guide_menu"),
+                CustomItemStack.create(Material.NETHER_STAR, "&bInfinity Expansion"),
+                inst.getName()
+        );
+        Slimefun.getAddonMenus().declareRoot(guideRoot);
     }
 
 }
