@@ -18,6 +18,8 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.block.data.Waterlogged;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.NamespacedKey;
+import org.bukkit.Registry;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -72,39 +74,39 @@ public final class Util {
     private static Enchantment enchantmentByPath(@Nonnull String path) {
         switch (path) {
             case "sharpness":
-                return Enchantment.DAMAGE_ALL;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("sharpness"));
             case "smite":
-                return Enchantment.DAMAGE_UNDEAD;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("smite"));
             case "bane-of-arthropods":
-                return Enchantment.DAMAGE_ARTHROPODS;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("bane_of_arthropods"));
             case "efficiency":
-                return Enchantment.DIG_SPEED;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("efficiency"));
             case "protection":
-                return Enchantment.PROTECTION_ENVIRONMENTAL;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("protection"));
             case "fire-aspect":
-                return Enchantment.FIRE_ASPECT;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("fire_aspect"));
             case "fortune":
-                return Enchantment.LOOT_BONUS_BLOCKS;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("fortune"));
             case "looting":
-                return Enchantment.LOOT_BONUS_MOBS;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("looting"));
             case "silk-touch":
-                return Enchantment.SILK_TOUCH;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("silk_touch"));
             case "thorns":
-                return Enchantment.THORNS;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("thorns"));
             case "aqua-affinity":
-                return Enchantment.WATER_WORKER;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("aqua_affinity"));
             case "power":
-                return Enchantment.ARROW_DAMAGE;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("power"));
             case "flame":
-                return Enchantment.ARROW_FIRE;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("flame"));
             case "infinity":
-                return Enchantment.ARROW_INFINITE;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("infinity"));
             case "punch":
-                return Enchantment.ARROW_KNOCKBACK;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("punch"));
             case "feather-falling":
-                return Enchantment.PROTECTION_FALL;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("feather_falling"));
             case "unbreaking":
-                return Enchantment.DURABILITY;
+                return Registry.ENCHANTMENT.get(NamespacedKey.minecraft("unbreaking"));
             default:
                 return null;
         }
