@@ -22,7 +22,7 @@ class TestInfinityExpansion {
 
     @Test
     void testLoad() {
-        MockBukkit.load(InfinityExpansion.class);
+        MockBukkit.load(InfinityExpansion.class, "Mooy1", "InfinityExpansion", "master", "auto-update");
     }
 
 }
