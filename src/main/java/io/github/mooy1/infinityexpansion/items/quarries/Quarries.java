@@ -122,7 +122,7 @@ public final class Quarries {
             outputs.add(Material.DIAMOND);
         }
 
-        new Quarry(Groups.ADVANCED_MACHINES, BASIC_QUARRY.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new Quarry(Groups.ADVANCED_MACHINES, BASIC_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE.item(), SlimefunItems.CARBONADO_EDGED_CAPACITOR.item(), Materials.MAGSTEEL_PLATE.item(),
                 new ItemStack(Material.IRON_PICKAXE), SlimefunItems.GEO_MINER.item(), new ItemStack(Material.IRON_PICKAXE),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
@@ -143,7 +143,7 @@ public final class Quarries {
             outputs.add(Material.NETHERRACK);
         }
 
-        new Quarry(Groups.ADVANCED_MACHINES, ADVANCED_QUARRY.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new Quarry(Groups.ADVANCED_MACHINES, ADVANCED_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.MACHINE_PLATE.item(), SlimefunItems.ENERGIZED_CAPACITOR.item(), Materials.MACHINE_PLATE.item(),
                 new ItemStack(Material.DIAMOND_PICKAXE), BASIC_QUARRY.item(), new ItemStack(Material.DIAMOND_PICKAXE),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
@@ -153,7 +153,7 @@ public final class Quarries {
             outputs.add(Material.COAL);
         }
 
-        new Quarry(Groups.ADVANCED_MACHINES, VOID_QUARRY.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new Quarry(Groups.ADVANCED_MACHINES, VOID_QUARRY, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Materials.VOID_INGOT.item(), SlimefunExtension.VOID_CAPACITOR.item(), Materials.VOID_INGOT.item(),
                 new ItemStack(Material.NETHERITE_PICKAXE), ADVANCED_QUARRY.item(), new ItemStack(Material.NETHERITE_PICKAXE),
                 Materials.MACHINE_CIRCUIT.item(), Materials.MACHINE_CORE.item(), Materials.MACHINE_CIRCUIT.item()
