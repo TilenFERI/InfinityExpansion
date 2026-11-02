@@ -6,7 +6,6 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import lombok.AllArgsConstructor;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -189,7 +188,6 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         return STATUS_SLOT;
     }
 
-    @AllArgsConstructor
     private enum Choice {
         NONE(CustomItemStack.create(Material.BARRIER, "&cNone", "", "&7 > Click to cycle"),
                 new Material[0],
@@ -215,6 +213,12 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         private final ItemStack item;
         private final Material[] inputs;
         private final Material[] outputs;
+
+        Choice(ItemStack item, Material[] inputs, Material[] outputs) {
+            this.item = item;
+            this.inputs = inputs;
+            this.outputs = outputs;
+        }
 
         private static final Choice[] values = values();
     }
