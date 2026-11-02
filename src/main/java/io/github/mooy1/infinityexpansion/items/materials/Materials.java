@@ -337,7 +337,7 @@ public final class Materials {
                 SlimefunItems.COPPER_INGOT.item(), SlimefunItems.SILICON.item(), SlimefunItems.COPPER_INGOT.item(),
                 SlimefunItems.COPPER_INGOT.item(), SlimefunItems.ELECTRO_MAGNET.item(), SlimefunItems.COPPER_INGOT.item()
         });
-        new Strainer(BASIC_STRAINER.item(), new ItemStack[] {
+        new Strainer(BASIC_STRAINER, new ItemStack[] {
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
                 new ItemStack(Material.STRING), new ItemStack(Material.STICK), new ItemStack(Material.STRING),
                 new ItemStack(Material.STICK), new ItemStack(Material.STRING), new ItemStack(Material.STICK),
@@ -345,11 +345,11 @@ public final class Materials {
         new Strainer(ADVANCED_STRAINER, new ItemStack[] {
                 Materials.MAGSTEEL.item(), new ItemStack(Material.STRING), Materials.MAGSTEEL.item(),
                 new ItemStack(Material.STRING), BASIC_STRAINER.item(), new ItemStack(Material.STRING),
-                Materials.MAGSTEEL.item(), new ItemStack(Material.STRING), Materials.MAGSTEEL
+                Materials.MAGSTEEL.item(), new ItemStack(Material.STRING), Materials.MAGSTEEL.item()
         }, 4).register(plugin);
         new Strainer(REINFORCED_STRAINER, new ItemStack[] {
                 SlimefunItems.REINFORCED_ALLOY_INGOT.item(), new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT.item(),
-                new ItemStack(Material.STRING), ADVANCED_STRAINER, new ItemStack(Material.STRING),
+                new ItemStack(Material.STRING), ADVANCED_STRAINER.item(), new ItemStack(Material.STRING),
                 SlimefunItems.REINFORCED_ALLOY_INGOT.item(), new ItemStack(Material.STRING), SlimefunItems.REINFORCED_ALLOY_INGOT.item()
         }, 20).register(plugin);
         registerEnhanced(MACHINE_CORE, new ItemStack[] {
