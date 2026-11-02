@@ -2,7 +2,7 @@ package io.github.mooy1.infinityexpansion.items.materials;
 
 import javax.annotation.Nullable;
 
-import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
+import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
