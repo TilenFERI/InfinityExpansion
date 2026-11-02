@@ -17,7 +17,7 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 public final class Groups {
 
     public static final ItemGroup INFINITY = new InfinityGroup(InfinityExpansion.createKey("infinity_recipes"),
-            CustomItemStack.create(Material.RESPAWN_ANCHOR, "&bInfinity &7Recipes"), 3);
+            CustomItemStack.create(Material.RESPAWN_ANCHOR, "&bInfinity &7Recipes"));
     public static final ItemGroup MAIN_MATERIALS = new ItemGroup(InfinityExpansion.createKey("main_materials"),
             CustomItemStack.create(Material.NETHER_STAR, "&bInfinity &7Materials"));
     public static final ItemGroup BASIC_MACHINES = new ItemGroup(InfinityExpansion.createKey("basic_machines"),
