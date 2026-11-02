@@ -13,7 +13,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
@@ -53,10 +52,10 @@ import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 public final class StorageUnit extends MenuBlock implements DistinctiveItem {
 
     /* Namespaced keys */
-    static final NamespacedKey EMPTY_KEY = InfinityExpansion.createKey("empty"); // key for empty item
-    static final NamespacedKey DISPLAY_KEY = InfinityExpansion.createKey("display"); // key for display item
-    private static final NamespacedKey ITEM_KEY = InfinityExpansion.createKey("item"); // item key for item pdc
-    private static final NamespacedKey AMOUNT_KEY = InfinityExpansion.createKey("stored"); // amount key for item pdc
+    static final org.bukkit.NamespacedKey EMPTY_KEY = new org.bukkit.NamespacedKey("infinityexpansion", "empty"); // key for empty item
+    static final org.bukkit.NamespacedKey DISPLAY_KEY = new org.bukkit.NamespacedKey("infinityexpansion", "display"); // key for display item
+    private static final org.bukkit.NamespacedKey ITEM_KEY = new org.bukkit.NamespacedKey("infinityexpansion", "item"); // item key for item pdc
+    private static final org.bukkit.NamespacedKey AMOUNT_KEY = new org.bukkit.NamespacedKey("infinityexpansion", "stored"); // amount key for item pdc
 
     /* Menu slots */
     static final int INPUT_SLOT = 10;
