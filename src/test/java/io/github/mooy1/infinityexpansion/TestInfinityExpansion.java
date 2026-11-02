@@ -1,5 +1,10 @@
 package io.github.mooy1.infinityexpansion;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.java.JavaPluginLoader;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -21,8 +26,26 @@ class TestInfinityExpansion {
     }
 
     @Test
-    void testLoad() {
-        MockBukkit.load(InfinityExpansion.class, "Mooy1", "InfinityExpansion", "master", "auto-update");
+    void testLoad() throws IOException {
+        File dataFolder = MockBukkit.getMock().getPluginManager()
+                .createTemporaryDirectory("InfinityExpansion-test");
+        File pluginFile = MockBukkit.getMock().getPluginManager()
+                .createTemporaryPluginFile("InfinityExpansion-test");
+
+        PluginDescriptionFile description = new PluginDescriptionFile(
+                "InfinityExpansion", "MODIFIED", InfinityExpansion.class.getName());
+
+        MockBukkit.load(
+                InfinityExpansion.class,
+                new JavaPluginLoader(MockBukkit.getMock()),
+                description,
+                dataFolder,
+                pluginFile,
+                "Mooy1",
+                "InfinityExpansion",
+                "master",
+                "auto-update"
+        );
     }
 
 }
