@@ -66,30 +66,30 @@ public final class Storage {
                 Materials.MAGSTEEL.item(), new ItemStack(Material.CRAFTING_TABLE), Materials.MAGSTEEL.item(),
                 Materials.MAGSTEEL.item(), new ItemStack(Material.BARREL), Materials.MAGSTEEL.item(),
         }).register(plugin);
-        new StorageUnit(BASIC_STORAGE.item(), BASIC_AMOUNT, new ItemStack[] {
+        new StorageUnit(BASIC_STORAGE, BASIC_AMOUNT, new ItemStack[] {
                 new ItemStack(Material.OAK_LOG), Materials.MAGSTEEL.item(), new ItemStack(Material.OAK_LOG),
                 new ItemStack(Material.OAK_LOG), new ItemStack(Material.BARREL), new ItemStack(Material.OAK_LOG),
                 new ItemStack(Material.OAK_LOG), Materials.MAGSTEEL.item(), new ItemStack(Material.OAK_LOG)
         }).register(plugin);
-        new StorageUnit(ADVANCED_STORAGE.item(), ADVANCED_AMOUNT, new ItemStack[] {
+        new StorageUnit(ADVANCED_STORAGE, ADVANCED_AMOUNT, new ItemStack[] {
                 Materials.MAGSTEEL.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL.item(),
                 Materials.MAGSTEEL.item(), BASIC_STORAGE.item(), Materials.MAGSTEEL.item(),
                 Materials.MAGSTEEL.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL
         }).register(plugin);
-        new StorageUnit(REINFORCED_STORAGE.item(), REINFORCED_AMOUNT, new ItemStack[] {
+        new StorageUnit(REINFORCED_STORAGE, REINFORCED_AMOUNT, new ItemStack[] {
                 Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_CIRCUIT.item(), Materials.MAGSTEEL_PLATE.item(),
                 Materials.MAGSTEEL_PLATE.item(), ADVANCED_STORAGE.item(), Materials.MAGSTEEL_PLATE.item(),
-                Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_PLATE.item(), Materials.MAGSTEEL_PLATE
+                Materials.MAGSTEEL_PLATE.item(), Materials.MACHINE_PLATE.item(), Materials.MAGSTEEL_PLATE.item()
         }).register(plugin);
-        new StorageUnit(VOID_STORAGE.item(), VOID_AMOUNT, new ItemStack[] {
+        new StorageUnit(VOID_STORAGE, VOID_AMOUNT, new ItemStack[] {
                 Materials.VOID_INGOT.item(), Materials.MACHINE_PLATE.item(), Materials.VOID_INGOT.item(),
                 Materials.MAGNONIUM.item(), REINFORCED_STORAGE.item(), Materials.MAGNONIUM.item(),
-                Materials.VOID_INGOT.item(), Materials.MACHINE_CORE.item(), Materials.VOID_INGOT
+                Materials.VOID_INGOT.item(), Materials.MACHINE_CORE.item(), Materials.VOID_INGOT.item()
         }).register(plugin);
         new StorageUnit(INFINITY_STORAGE, INFINITY_AMOUNT, new ItemStack[] {
                 Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(), Materials.INFINITE_INGOT.item(),
                 Materials.INFINITE_INGOT.item(), VOID_STORAGE.item(), Materials.INFINITE_INGOT.item(),
-                Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(), Materials.INFINITE_INGOT
+                Materials.INFINITE_INGOT.item(), Materials.VOID_INGOT.item(), Materials.INFINITE_INGOT.item()
         }).register(plugin);
     }
 
