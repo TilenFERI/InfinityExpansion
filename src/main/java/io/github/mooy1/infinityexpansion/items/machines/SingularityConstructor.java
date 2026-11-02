@@ -8,7 +8,6 @@ import java.util.Map;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import lombok.AllArgsConstructor;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -176,7 +175,7 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
             else if (menu.hasViewer()) {
                 menu.replaceExistingItem(STATUS_SLOT, CustomItemStack.create(
                         Material.LIME_STAINED_GLASS_PANE,
-                        "&aConstructing " + triplet.output.getDisplayName() + "...",
+                        "&aConstructing " + triplet.output.getItemMeta().getDisplayName() + "...",
                         "&7" + progress + " / " + triplet.amount
                 ));
             }
@@ -280,7 +279,6 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
         return items;
     }
 
-    @AllArgsConstructor
     private static final class Recipe {
 
         private final ItemStack output;
@@ -288,6 +286,12 @@ public final class SingularityConstructor extends AbstractMachineBlock implement
         private final String id;
         private final int amount;
 
+        private Recipe(ItemStack output, ItemStack input, String id, int amount) {
+            this.output = output;
+            this.input = input;
+            this.id = id;
+            this.amount = amount;
+        }
     }
 
 }
