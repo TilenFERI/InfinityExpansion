@@ -25,7 +25,7 @@ import io.github.mooy1.infinityexpansion.items.storage.StorageSaveFix;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 
-public final class InfinityExpansion extends AbstractAddon {
+public class InfinityExpansion extends AbstractAddon {
 
     public InfinityExpansion(JavaPluginLoader loader, PluginDescriptionFile description, File dataFolder, File file) {
         super(loader, description, dataFolder, file,
