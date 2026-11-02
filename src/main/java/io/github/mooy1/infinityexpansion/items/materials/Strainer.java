@@ -2,7 +2,6 @@ package io.github.mooy1.infinityexpansion.items.materials;
 
 import javax.annotation.Nullable;
 
-import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
@@ -21,7 +20,7 @@ import io.github.thebusybiscuit.slimefun5.core.attributes.NotPlaceable;
  */
 public final class Strainer extends SlimefunItem implements NotPlaceable {
 
-    private static final NamespacedKey KEY = InfinityExpansion.createKey("strainer_speed");
+    private static final org.bukkit.NamespacedKey KEY = new org.bukkit.NamespacedKey("infinityexpansion", "strainer_speed");
 
     public Strainer(SlimefunItemStack item, ItemStack[] recipe, int speed) {
         super(Groups.BASIC_MACHINES, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
