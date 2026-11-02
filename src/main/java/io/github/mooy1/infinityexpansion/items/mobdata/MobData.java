@@ -86,7 +86,7 @@ public final class MobData {
                 Materials.MACHINE_CIRCUIT.item(), SlimefunItems.REINFORCED_ALLOY_INGOT.item(), Materials.MACHINE_CIRCUIT.item()
         }, INFUSER_ENERGY).register(plugin);
 
-        new SlimefunItem(Groups.MOB_SIMULATION, EMPTY_DATA_CARD.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        new SlimefunItem(Groups.MOB_SIMULATION, EMPTY_DATA_CARD, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.MAGNESIUM_INGOT.item(), Materials.MACHINE_CIRCUIT.item(), SlimefunItems.MAGNESIUM_INGOT.item(),
                 SlimefunItems.SYNTHETIC_SAPPHIRE.item(), SlimefunItems.SYNTHETIC_DIAMOND.item(), SlimefunItems.SYNTHETIC_EMERALD.item(),
                 SlimefunItems.MAGNESIUM_INGOT.item(), Materials.MACHINE_CIRCUIT.item(), SlimefunItems.MAGNESIUM_INGOT.item()
@@ -175,7 +175,7 @@ public final class MobData {
         }).addDrop(Material.NETHER_STAR, 1).addDrop(SlimefunItems.COMPRESSED_CARBON.item(), 8, 2).register(plugin);
         new MobDataCard(ENDER_DRAGON, MobDataTier.BOSS, new ItemStack[] {
                 new ItemStack(Material.END_CRYSTAL, 64), new SlimefunItemStack(Materials.VOID_INGOT, 32).item(), new ItemStack(Material.CHORUS_FLOWER, 64),
-                SlimefunItems.INFUSED_ELYTRA, EMPTY_DATA_CARD.item(), new ItemStack(Material.DRAGON_HEAD, 1),
+                SlimefunItems.INFUSED_ELYTRA.item(), EMPTY_DATA_CARD.item(), new ItemStack(Material.DRAGON_HEAD, 1),
                 new SlimefunItemStack(SlimefunItems.ENDER_LUMP_3, 64).item(), new SlimefunItemStack(Materials.VOID_INGOT, 32).item(), new ItemStack(Material.DRAGON_BREATH, 64)
         }).addDrop(Materials.VOID_DUST.item(), 1).addDrop(Materials.ENDER_ESSENCE.item(), 4).addDrop(Material.DRAGON_EGG, 1_000_000).register(plugin);
         new MobDataCard(BEE, MobDataTier.NEUTRAL, new ItemStack[] {
