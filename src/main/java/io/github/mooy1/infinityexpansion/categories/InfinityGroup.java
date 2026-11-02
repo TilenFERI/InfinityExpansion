@@ -27,7 +27,7 @@ import io.github.mooy1.infinitylib.common.StackUtils;
 import io.github.mooy1.infinitylib.machines.MenuBlock;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.groups.NestedItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
 import io.github.thebusybiscuit.slimefun5.api.researches.Research;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideImplementation;
@@ -46,7 +46,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
  *
  * @author Mooy1
  */
-public final class InfinityGroup extends ItemGroup {
+public final class InfinityGroup extends NestedItemGroup {
 
     private static final int[] INFINITY_RECIPE_SLOTS = {
             1, 2, 3, 4, 5, 6,
@@ -105,6 +105,7 @@ public final class InfinityGroup extends ItemGroup {
         });
     }
 
+    @Override
     public void open(Player player, PlayerProfile playerProfile, SlimefunGuideMode slimefunGuideMode) {
         open(player, new BackEntry(null, playerProfile, Slimefun.getRegistry().getSlimefunGuide(slimefunGuideMode)), true);
         playerProfile.getGuideHistory().add(this, 1);
