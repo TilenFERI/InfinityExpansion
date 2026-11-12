@@ -26,6 +26,7 @@ import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.mooy1.infinitylib.metrics.bukkit.Metrics;
 import io.github.mooy1.infinitylib.metrics.charts.SimplePie;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 
 public final class InfinityExpansion extends AbstractAddon {
 
@@ -75,6 +76,8 @@ public final class InfinityExpansion extends AbstractAddon {
         if (getConfig().getBoolean("balance-options.enable-researches")) {
             Researches.setup();
         }
+
+        Slimefun.getItemTranslationService().registerTranslations(this);
     }
 
     @Override
