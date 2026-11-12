@@ -26,7 +26,6 @@ import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
 import io.github.mooy1.infinitylib.metrics.bukkit.Metrics;
 import io.github.mooy1.infinitylib.metrics.charts.SimplePie;
-import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 
 public final class InfinityExpansion extends AbstractAddon {
 
@@ -77,7 +76,24 @@ public final class InfinityExpansion extends AbstractAddon {
             Researches.setup();
         }
 
-        Slimefun.getItemTranslationService().registerTranslations(this);
+        registerItemTranslations();
+    }
+
+    /**
+     * Uses reflection so this addon can still compile against its legacy Slimefun API
+     * while registering its bundled translations when running with the Slimefun 5 fork.
+     */
+    private void registerItemTranslations() {
+        try {
+            Class<?> slimefunClass = Class.forName(
+                    "io.github.thebusybiscuit.slimefun5.implementation.Slimefun");
+            Object translationService = slimefunClass.getMethod("getItemTranslationService").invoke(null);
+            translationService.getClass()
+                    .getMethod("registerTranslations", org.bukkit.plugin.java.JavaPlugin.class)
+                    .invoke(translationService, this);
+        } catch (ReflectiveOperationException e) {
+            log(Level.SEVERE, "Could not register InfinityExpansion item translations.", e);
+        }
     }
 
     @Override
