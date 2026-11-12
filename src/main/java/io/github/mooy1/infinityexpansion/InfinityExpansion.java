@@ -92,7 +92,8 @@ public final class InfinityExpansion extends AbstractAddon {
                     .getMethod("registerTranslations", org.bukkit.plugin.java.JavaPlugin.class)
                     .invoke(translationService, this);
         } catch (ReflectiveOperationException e) {
-            log(Level.SEVERE, "Could not register InfinityExpansion item translations.", e);
+            log(Level.SEVERE, "Could not register InfinityExpansion item translations: "
+                    + e.getClass().getSimpleName() + ": " + e.getMessage());
         }
     }
 
