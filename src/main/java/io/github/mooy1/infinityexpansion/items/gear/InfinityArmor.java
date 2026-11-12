@@ -2,7 +2,7 @@ package io.github.mooy1.infinityexpansion.items.gear;
 
 import javax.annotation.Nonnull;
 
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 
