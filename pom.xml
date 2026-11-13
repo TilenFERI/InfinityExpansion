@@ -38,9 +38,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun</groupId>
-            <artifactId>Slimefun4</artifactId>
-            <version>934ab822a6</version>
+            <groupId>io.github.thebusybiscuit</groupId>
+            <artifactId>Slimefun5</artifactId>
+            <version>5.3.3</version>
             <scope>provided</scope>
         </dependency>
 
